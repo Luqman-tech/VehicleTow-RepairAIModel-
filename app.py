@@ -6,7 +6,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load trained model
-model = joblib.load("model/mechanic_model.pkl")
+model = joblib.load("model/finalmodel.pkl")
 
 # Home route
 @app.route('/')

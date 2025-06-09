@@ -110,10 +110,15 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-print("\n🎉 Done! Your AI model is now more robust and interpretable.")
+from flask import Flask
+
+app = Flask(__name__)
+if __name__ == "__main__":
+    app.run()
+
 
 import joblib
 
 # Save the best model from GridSearch
-joblib.dump(model, 'model/mechanic_model.pkl')
+joblib.dump(model, 'model/finalmodel.pkl')
 
